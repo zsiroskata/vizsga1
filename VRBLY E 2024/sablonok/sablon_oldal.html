@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		* { box-sizing: border-box}
+		html {scroll-behavior:smooth}
+		body {margin:auto;padding:0}
+		header {max-width:800px;margin:auto;overflow:auto}
+		header img {height:100px;float:left}
+		header h1 {text-align:right}
+		a {text-decoration:none}
+		nav {text-align:center}
+		main {max-width:800px;margin:auto}
+		h2 {text-align:center}
+		footer {padding:50px 0;text-align:center}
+	</style>
+</head>
+
+<body>
+	<header>
+		<a href="./"><img src="" alt="logo"></a>
+		<h1>Főcím</h1>
+	</header>
+
+  <nav>
+		<style>
+		</style>
+		<div id="hambi" onclick="hambimenu()">&#9776;</div>
+		<ul id="menulista">
+			<li class='menupont'><a href=''>menü</a></li>
+			<li class='menupont'><a href=''>menü</a></li>
+			<li class='menupont'><a href=''>menü</a></li>
+		</ul>
+		<script>
+			function hambimenu() {
+				let menu=document.getElementById("menulista");
+				if (menu.style.display=="block") {
+					menu.style.display="none";
+					document.getElementById("hambi").innerHTML="&#9776;";
+				}
+				else {
+					menu.style.display="block";
+					document.getElementById("hambi").innerHTML="X";
+				}
+			}
+		</script>
+  </nav>
+
+	<main>
+		<h2>Cím</h2>
+		<p>Szöveg</p>
+		<style>
+			table {width:100%;text-align:left}
+			table,tr {border:1px gray solid;border-collapse:collapse}
+			th,td {padding:10px}
+		</style>
+		<table>
+			<tr><th>fejlec</th><th>fejlec</th><th>fejlec</th><th>fejlec</th><th>fejlec</th></tr>
+			<tr><td>sorelem</td><td>sorelem</td><td>sorelem</td><td>sorelem</td><td>sorelem</td></tr>
+		</table>
+	
+		<style>
+			.adat-keret {width:500px;max-width:100%;margin:auto;border:2px solid gray;padding:20px;overflow:auto}
+			.elem-adat {margin:auto;border:5px solid gray;padding:20px;width:150px;height:150px;float:left;margin-right:10px}
+			.elem-adat p {margin:0;text-align:center;padding-bottom:5px}
+			.vegyjel {font-size:250%}
+			.elem-tulajdonsag {line-height:20px;text-align:left}
+			@media screen and (max-width: 600px) {.elem-adat {margin:auto;float:none;margin-bottom:20px;}}
+		</style>
+		<h2>Elemnév</h2>
+		<div class="adat-keret">
+			<div class="elem-adat">
+				rendszám		
+				<p class="vegyjel">Vjel</p>
+				<p>Elemnév</p>	
+			</div>
+			<div class="elem-tulajdonsag">
+				Halmazállapot<br>
+				Felfedezés<br>
+				Felfedező<br>
+				Csoport<br>
+				Leírás	
+			</div>
+		</div>
+		
+	</main>
+
+	<footer>
+		<p>
+			Név - dátum
+		</p><p>
+			Források
+		</p>
+	</footer>
+
+</body>
+</html>
